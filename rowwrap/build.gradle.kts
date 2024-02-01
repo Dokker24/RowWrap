@@ -1,11 +1,20 @@
 plugins {
-    id("com.android.library")
+    id("com.android.library") version "8.2.2"
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
     namespace = "ru.den.rowwrap"
     compileSdk = 34
+
+    publishing {
+        multipleVariants {
+            allVariants()
+            withJavadocJar()
+            withSourcesJar()
+        }
+    }
 
     defaultConfig {
         minSdk = 26
@@ -42,6 +51,26 @@ android {
     }
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("mavenRelease") {
+                groupId = "ru.den"
+                artifactId = "dokker24"
+                version = "1.0"
+
+                from(components["release"])
+            }
+            create<MavenPublication>("mavenDebug") {
+                groupId = "ru.den"
+                artifactId = "dokker24"
+                version = "1.0"
+
+                from(components["debug"])
+            }
+        }
+    }
+}
 
 
 dependencies {

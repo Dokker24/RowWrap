@@ -18,7 +18,6 @@ android {
 
     defaultConfig {
         minSdk = 26
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -56,14 +55,14 @@ afterEvaluate {
         publications {
             create<MavenPublication>("mavenRelease") {
                 groupId = "ru.den"
-                artifactId = "dokker24"
+                artifactId = "rowwrap"
                 version = "1.0"
 
                 from(components["release"])
             }
             create<MavenPublication>("mavenDebug") {
                 groupId = "ru.den"
-                artifactId = "dokker24"
+                artifactId = "rowwrap"
                 version = "1.0"
 
                 from(components["debug"])

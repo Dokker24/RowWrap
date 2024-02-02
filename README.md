@@ -21,7 +21,7 @@ dependencyResolutionManagement {
  Add the **dependency**:
 ```kotlin
 dependencies {
-    implementation 'com.github.Dokker24:RowWrap:1.0.5'
+    implementation 'com.github.Dokker24:RowWrap:1.0.6'
 	}
 ```
 

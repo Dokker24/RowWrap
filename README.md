@@ -4,9 +4,10 @@
 
 RowWrap is a jetpack compose library to make it easy to create beautiful screens for your application.😺 The library allows you to create a Row, but if the element does not fit on the line, it is moved to the next line.😁
 
-# Using
 
-Add it in your root build.gradle at the end of repositories:
+### Gradle
+
+Add it in your root `build.gradle` at the end of repositories:
 ```kotlin
 dependencyResolutionManagement {
 		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -17,14 +18,17 @@ dependencyResolutionManagement {
 	}
 ```
 
- Add the dependency:
+ Add the **dependency**:
 ```kotlin
 dependencies {
     implementation 'com.github.Dokker24:RowWrap:1.0.5'
 	}
 ```
 
-# Preview
+
+
+### Using
+***usage example***:
 
 ```kotlin
 RowWrap(
